@@ -38,7 +38,7 @@ brewery.count.by.state <- count(breweries$State)  # obtain count of breweries in
 colnames(brewery.count.by.state) <- c("States", "Count") # changing column names 
 ```
 ##### *Breweries in each state*
-```{r}
+```{r fig.width=12}
 print(brewery.count.by.state) 
 p1 <- ggplot(data = brewery.count.by.state, aes(x=States, y=Count)) + geom_bar(stat="identity") # bar plot
 p1
